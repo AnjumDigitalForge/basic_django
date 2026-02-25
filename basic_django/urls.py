@@ -23,5 +23,6 @@ urlpatterns = [
     path('', lambda request: redirect('myname/')),  # Redirect root to myname/
     path('admin/', admin.site.urls),
 	path('', include('first_app.urls')), #this will include the urls.py file of first_app and it will check the urls.py file of first_app for the path and views.
+    
 ]
 

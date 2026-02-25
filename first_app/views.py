@@ -9,4 +9,6 @@ def myname(request):
 def yourname(request):
     return HttpResponse('Hello You!')
 
+def enrolled_students(request):
+    return HttpResponse('Enrolled Students')
 
