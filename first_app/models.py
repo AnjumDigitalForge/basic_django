@@ -9,6 +9,7 @@ class std_sign_up(models.Model):
     age = models.IntegerField()
     gender = models.CharField(max_length=10)
     grade = models.CharField(max_length=10)
+    contact = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=10)
     auth_user = models.OneToOneField(User, on_delete=models.CASCADE) #Relationship field
@@ -19,3 +20,4 @@ class std_sign_up(models.Model):
     class Meta:
         verbose_name = 'Student Sign Up'        # Singular name in replacement of 'std_sign_up' the class / model name
         verbose_name_plural = 'Student Sign Ups' # Plural name in replacement of 'std_sign_up' the class / model name
+

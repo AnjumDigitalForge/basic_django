@@ -5,4 +5,5 @@ urlpatterns = [
 	path('myname/', views.myname),
 	path('yourname/', views.yourname),
 	path('students_list/', views.enrolled_students),
+    path('signup/', views.sign_up),
 ]

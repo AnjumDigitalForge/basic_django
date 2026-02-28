@@ -1,3 +1,5 @@
+from urllib import request
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -11,4 +13,7 @@ def yourname(request):
 
 def enrolled_students(request):
     return HttpResponse('Enrolled Students')
+
+def sign_up(request):
+    return render(request, 'std_sign_up.html')  # This finds your template
 

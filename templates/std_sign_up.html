@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+
+</header>
+<head>
+    <title>Student Sign Up</title>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h1 id="h1">Fill the Following Form to Sign Up <br> As Student in Online Schooling</h1>
+        <form>
+            <div class="row" id="formrow1">
+                <div class="col-md-4" id="col1">
+                    <label> Enter Your Name </label>
+                    <input type="text" name="Fname" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-4" id="col2">
+                    <label> Enter Your Father's Name </label>
+                    <input type="text" name="Lname" class="form-control" placeholder="Father's Name" required>
+                </div>
+                <div class="col-md-4" id="col3">
+                    <label> Enter Your Age </label>
+                    <input type="text/number" name="DoB" class="form-control" placeholder="Your Age" required>
+                </div>
+                <div class="col-md-4" id="col3">
+                    <label> Enter Your Gender </label>
+                    <input type="text/number" name="Sex" class="form-control" placeholder="Gender" required>
+                </div>
+            </div>
+            <div class="row" id="formrow2">
+                <div class="col-md-4">
+                    <label> Enter Class for Admission </label>
+                    <input type="text/number" name="Class" class="form-control" placeholder="Enter Your Class" required>
+                </div>
+                <div class="col-md-4">
+                    <label> Enter Contact No. </label>
+                    <input type="text/number" name="Contact" class="form-control" placeholder="+92-300-1234567" required>
+                </div>
+                <div class="col-md-4">
+                    <label> Enter Your Email </label>
+                    <input type="email" name="Email" class="form-control" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="row" id="formrow3">
+                <div class="col-md-4">
+                    <label> Add a Password </label>
+                    <input type="password" name="Password" class="form-control" placeholder="Enter Password" required>
+                </div>
+                <div class="col-md-4">
+                    <label> Confirm Your Password </label>
+                    <input type="password" name="Cnfmpassword" class="form-control" placeholder="Confirm Password" required>
+                </div>
+            </div>
+            <button id="std_sign_btn" onclick="ok()" type="submit" class="btn btn-success mt-3 mb-5" value="Signup"> <a href="./04_Login.html"> Signup </a> </button>
+        </form>
+    </div>
+
+</body>
+</html>
