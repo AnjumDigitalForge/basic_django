@@ -2,7 +2,7 @@
 <body>
     <h1 id="h1">Fill the Following Form to Sign Up <br> As Student in Online Schooling</h1>
     <div class="container" id="cont1">
-        <form method="POST" action="{% url 'signup' %}">
+        <form method="POST" action="{% url 'student_signup' %}">
             {% csrf_token %}
             <div class="row" id="formrow1">
                 <div class="col-md-4" id="col1">

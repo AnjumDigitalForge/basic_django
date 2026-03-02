@@ -1,0 +1,12 @@
+{% include "header.html" %}
+
+<div class="container" id="cont1">
+    <h1 id="h1">Welcome to Learn with Anjum</h1>
+    <h2 id="h2">Please Signup by Clicking the following Links</h2>
+    <div class="signup-links">
+        <a href="{% url 'student_signup' %}" class="btn btn-success">Student Signup</a>
+        <a href="{% url 'teacher_signup' %}" class="btn btn-success">Teacher Signup</a>
+    </div>
+</div>
+
+{% include "footer.html" %}
