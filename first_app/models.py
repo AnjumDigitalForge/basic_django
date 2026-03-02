@@ -1,23 +1,18 @@
-# BUILT-IN: Django's database tools
-from django.db import models
-# BUILT-IN: Django's user system
-from django.contrib.auth.models import User
+from django.db import models # BUILT-IN: Django's database tools
 
-class std_sign_up(models.Model):
-    student_name = models.CharField(max_length=100)
-    father_name = models.CharField(max_length=100)
-    age = models.IntegerField()
-    gender = models.CharField(max_length=10)
-    grade = models.CharField(max_length=10)
-    contact = models.CharField(max_length=15)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=10)
-    auth_user = models.OneToOneField(User, on_delete=models.CASCADE) #Relationship field
-    
-    def __str__(self): #This method is used to return a string representation of the object. It is called when you print an instance of the model or when you display it in the Django admin interface.
-        return self.student_name
-    
-    class Meta:
-        verbose_name = 'Student Sign Up'        # Singular name in replacement of 'std_sign_up' the class / model name
-        verbose_name_plural = 'Student Sign Ups' # Plural name in replacement of 'std_sign_up' the class / model name
+from django.contrib.auth.models import User # BUILT-IN: Django's user system
 
+class StdSignUp(models.Model):
+    std_name = models.CharField(max_length=100)
+    std_father_name = models.CharField(max_length=100)
+    std_age = models.IntegerField()
+    std_gender = models.CharField(max_length=10)
+    std_grade = models.CharField(max_length=30)
+    std_contact = models.CharField(max_length=15)
+    std_email = models.EmailField()
+    std_password = models.CharField(max_length=20)
+    user = models.ManyToManyField(User, blank=True)  # Establishes a many-to-many relationship with the User model
+
+    def __str__(self):
+        return f"{self.id} - {self.std_name}"
+    

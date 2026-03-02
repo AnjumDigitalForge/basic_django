@@ -1,0 +1,39 @@
+
+    {% include "header.html" %}
+    <title>Student Records</title>
+<body>
+    <h1>Enrolled Students</h1>   
+    <table>
+        <thead>
+            <tr style="text-align: center;">
+                <th>Student_Id</th>
+                <th>Student Name</th>
+                <th>Father's Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Grade</th>
+                <th>Contact</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+                <td style="text-align: center;">{{ student.id }}</td>
+                <td>{{ student.std_name }}</td>
+                <td>{{ student.std_father_name }}</td>
+                <td style="text-align: center;">{{ student.std_age }}</td>
+                <td style="text-align: center;">{{ student.std_gender }}</td>
+                <td>{{ student.std_grade }}</td>
+                <td style="text-align: center;">{{ student.std_contact }}</td>
+                <td>{{ student.std_email }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    <div style="text-align: right; margin-top: 10px; margin-right:20px;">
+        <p>Total Students: <strong>{{ students.count }}</strong></p>
+    </div>
+</body>
+</html>

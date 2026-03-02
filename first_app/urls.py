@@ -4,6 +4,6 @@ urlpatterns = [
 #	path('', views.home) # ‘’ it means, if path is empty so go to “def home(request):” of views.py
 	path('myname/', views.myname),
 	path('yourname/', views.yourname),
-	path('students_list/', views.enrolled_students),
-    path('signup/', views.sign_up),
+    path('signup/', views.signup_view, name='signup'),
+    path('students/', views.student_list, name='student_list'),
 ]

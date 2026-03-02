@@ -1,7 +1,8 @@
-from urllib import request
-
 from django.http import HttpResponse
-from django.shortcuts import render
+
+from django.shortcuts import render, redirect # BUILT-IN: Django's tools for rendering templates and redirecting users to different pages
+
+from .models import StdSignUp # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
 
 # Create your views here.
 def myname(request):
@@ -11,9 +12,21 @@ def myname(request):
 def yourname(request):
     return HttpResponse('Hello You!')
 
-def enrolled_students(request):
-    return HttpResponse('Enrolled Students')
+def signup_view(request):
+    if request.method == 'POST':
+        # Get form data from the POST request
+        StdSignUp.objects.create(
+        std_name = request.POST['std_name'],
+        std_father_name = request.POST['std_father_name'],
+        std_age = request.POST['std_age'],
+        std_gender = request.POST['std_gender'],
+        std_grade = request.POST['std_grade'],
+        std_contact = request.POST['std_contact'],
+        std_email = request.POST['std_email'],
+        )
+        return redirect('student_list')  # Redirect to a page that shows the list of students after successful registration
+    return render(request, 'std_sign_up.html')  # Render the registration form template for GET requests
 
-def sign_up(request):
-    return render(request, 'std_sign_up.html')  # This finds your template
-
+def student_list(request):
+    students = StdSignUp.objects.all()  # Retrieve all student records from the database
+    return render(request, 'enrolled_students.html', {'students': students})  # Render the student list template with the retrieved student data
