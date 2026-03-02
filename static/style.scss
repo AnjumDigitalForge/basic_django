@@ -1,3 +1,16 @@
+@import "variables";
+
+@import "form";
+
+@import "container";
+
+@import "heading";
+
+@mixin contcent{
+	display: block;
+	margin: auto;
+}
+
 #h1{
     color: cyan;
 }
@@ -6,6 +19,41 @@
         margin: 20px;
         background-color: #f5f5f5;
         }
+#navbar{
+    border: 1px solid $bdr-color1;
+}
+#navbar{
+	border: px solid $bdr-color1;
+	height:auto;
+	margin-left: 1%;
+	width: 59%;
+    #nav1{
+        border: 1px solid $bdr-color3;
+        @include contcent;
+        height:60px;
+        ul {
+            list-style-type: none;
+            margin-left: 0%;		
+            li {
+                float: left;
+                height: auto;
+                margin: 1%;
+                margin-left: 2%;
+                margin-top: 3%;
+                a{
+                    border: px solid $bdr-color1;
+                    text-decoration: none;
+                    color:$prm_color3;
+                    font-weight:$ft-wgt1;
+                    &:hover {
+                        color:$prm_color1;
+                    }
+                }
+            }	
+        }
+        /* Change the link color to #111 (black) on hover */	  
+    }
+}
         h1 {
             color: #333;
             text-align: center;
@@ -39,3 +87,12 @@
             display: inline-block;
             margin-bottom: 20px;
         }
+.studymaterial{
+	border: px solid $bdr-color1;
+	border-radius:$bdr-rds1;
+	margin:auto;
+	margin-top: 1%;
+	&:hover{
+		box-shadow:$bdr-shdw2;
+	}
+}

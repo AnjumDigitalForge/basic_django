@@ -8,9 +8,6 @@ from .models import StdSignUp, TeacherSignUp # This line imports the std_sign_up
 def home(request):
     return render(request, 'index.html')
 
-def yourname(request):
-    return HttpResponse('Hello You!')
-
 def student_signup_view(request):
     if request.method == 'POST':
         # Get form data from the POST request
@@ -49,3 +46,6 @@ def teacher_signup_view(request):
 def teacher_list(request):
     teachers = TeacherSignUp.objects.all()  # Retrieve all teacher records from the database
     return render(request, 'faculty_list.html', {'teachers': teachers})  # Render the teacher list template with the retrieved teacher data
+
+def study_material(request):
+    return render(request, 'stdy_material.html')  # Render the study material template for GET requests

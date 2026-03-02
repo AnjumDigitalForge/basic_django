@@ -1,5 +1,18 @@
 {% include "header.html" %}
 
+<div class="container" id="cont">
+    <h1 id="h1">Dashboard</h1>
+    <div class="col-md-7" id="navbar">
+        <div class="nav" id="nav1">
+            <ul>
+                <li><a href="{% url 'home' %}">Signup Page</a></li>
+                <li><a href="{% url 'teacher_list' %}">Teacher's List</a></li>
+                <li><a href="{% url 'student_list' %}">Student's List</a></li>
+                <li><a href="{% url 'study_material' %}">Study Material</a></li>
+            </ul>
+        </div>        
+    </div>
+</div>
 <div class="container" id="cont1">
     <h1 id="h1">Welcome to Learn with Anjum</h1>
     <h2 id="h2">Please Signup by Clicking the following Links</h2>

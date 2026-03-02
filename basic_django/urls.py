@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path, include
 #why does we have used ‘include’ here?
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', lambda request: redirect('home/')),  # Redirect root to myname/
     path('admin/', admin.site.urls),
-	path('', include('first_app.urls')), #this will include the urls.py file of first_app and it will check the urls.py file of first_app for the path and views.
-    
+	path('', include('first_app.urls')), #this will include the urls.py file of first_app and it will check the urls.py file of first_app for the path and views.    
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,15 @@
+
+form{
+    border: px solid $bdr-color3;
+    font-weight: bold;
+	margin-top: 5%;
+    &:hover{
+        color:$prm_color1;
+    }
+    input{
+        margin-bottom: 10%;
+    }       
+}
+#formrow1{
+    margin: 0%;
+}
