@@ -116,12 +116,12 @@ h5:hover {
   text-align: center;
 }
 
-#std_signup_th {
+#std_list_th, #tchr_list_th {
   text-align: center;
   background-color: #494d52;
   color: #e2ede1;
 }
-#std_signup_th:hover {
+#std_list_th:hover, #tchr_list_th:hover {
   background-color: #4a9146;
   color: #e2ede1;
 }
