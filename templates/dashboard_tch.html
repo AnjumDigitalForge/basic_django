@@ -1,0 +1,18 @@
+{% include "header.html" %}
+
+<div class="container" id="dashboard">
+    <h1 id="h1">Dashboard</h1>
+        <div class="col-md-7" id="navbar">
+            <div class="nav" id="nav1">
+                <ul>
+                    <img src="/media/images/My_Picture.jpg" alt="Profile Picture" class="img-circle" width="200" height="250">
+                    <li><a href="{% url 'profile_tchr' %}">My Profile</a></li>
+                    <li><a href="{% url 'teacher_list' %}">Teacher's List</a></li>
+                    <li><a href="{% url 'student_list' %}">Student's List</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="{% url 'study_material' %}">Study Material</a></li>
+                    <button class="btn btn-primary" style="margin-top: 5%; font-weight:bold;" >Logout</button>
+                </ul>
+            </div>        
+        </div>
+</div>

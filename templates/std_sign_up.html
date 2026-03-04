@@ -1,6 +1,7 @@
 {% include "header.html" %}
+<title>Student Sign Up</title>
 <body>
-    <h1 id="h1">Fill the Following Form to Sign Up <br> As Student in Online Schooling</h1>
+    <h2 id="h2"> Student Sign Up Form </h2>
     <div class="container" id="cont1">
         <form method="POST" action="{% url 'student_signup' %}">
             {% csrf_token %}
@@ -21,8 +22,6 @@
                     <label> Enter Your Gender </label>
                     <input type="text" name="std_gender" class="form-control" placeholder="Gender" required>
                 </div>
-            </div>
-            <div class="row" id="formrow2">
                 <div class="col-md-4">
                     <label> Enter Class for Admission </label>
                     <input type="text/number" name="std_grade" class="form-control" placeholder="Enter Your Class" required>
@@ -35,8 +34,6 @@
                     <label> Enter Your Email </label>
                     <input type="email" name="std_email" class="form-control" placeholder="Email" required>
                 </div>
-            </div>
-            <div class="row" id="formrow3">
                 <div class="col-md-4">
                     <label> Add a Password </label>
                     <input type="password" name="std_password" class="form-control" placeholder="Enter Password" required>

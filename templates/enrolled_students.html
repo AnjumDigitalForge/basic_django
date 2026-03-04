@@ -3,17 +3,17 @@
     <title>Student Records</title>
 <body>
     <h1>Enrolled Students</h1>   
-    <table>
+    <table class="table table-striped">
         <thead>
-            <tr style="text-align: center;">
-                <th>Student_Id</th>
-                <th>Student Name</th>
-                <th>Father's Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Grade</th>
-                <th>Contact</th>
-                <th>Email</th>
+            <tr>
+                <th id="std_signup_th">Student_Id</th>
+                <th id="std_signup_th">Student Name</th>
+                <th id="std_signup_th">Father's Name</th>
+                <th id="std_signup_th">Age</th>
+                <th id="std_signup_th">Gender</th>
+                <th id="std_signup_th">Grade</th>
+                <th id="std_signup_th">Contact</th>
+                <th id="std_signup_th">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
         </tbody>
     </table>
     
-    <div style="text-align: right; margin-top: 10px; margin-right:20px;">
+    <div style="text-align: right; margin-top: 10px; margin-right:5rem;">
         <p>Total Students: <strong>{{ students.count }}</strong></p>
     </div>
 </body>

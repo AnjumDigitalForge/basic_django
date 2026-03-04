@@ -1,98 +1,97 @@
-@import "variables";
+@import 'container';
 
-@import "form";
+@import 'form';
 
-@import "container";
+@import 'heading';
 
-@import "heading";
+@import 'variables';
 
-@mixin contcent{
-	display: block;
-	margin: auto;
+#logo{
+    border:0px solid $bdr-color1;
+    border-radius: $bdr-rds2;
+    margin-top: 3%;
 }
 
 #h1{
-    color: cyan;
+    font-size: 3rem;
+    margin-top: 2%;
+    text-align: center;
 }
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f5f5f5;
+
+#h2{
+    font-size: 2rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#std_signup_th{
+    text-align: center;
+    background-color: $prm_color3;
+    color: $prm_color2;
+        &:hover{
+            background-color: $prm_color1;
+            color: $prm_color2;
         }
-#navbar{
+}
+
+#dashboard{
+    width: 90%;
+    margin-left: 5%;
+    float: left;
     border: 1px solid $bdr-color1;
+    border-radius: $bdr-rds2;
+    text-align: $txt-align2;
 }
-#navbar{
-	border: px solid $bdr-color1;
-	height:auto;
-	margin-left: 1%;
-	width: 59%;
-    #nav1{
-        border: 1px solid $bdr-color3;
-        @include contcent;
-        height:60px;
-        ul {
-            list-style-type: none;
-            margin-left: 0%;		
-            li {
-                float: left;
-                height: auto;
-                margin: 1%;
-                margin-left: 2%;
-                margin-top: 3%;
-                a{
-                    border: px solid $bdr-color1;
-                    text-decoration: none;
-                    color:$prm_color3;
-                    font-weight:$ft-wgt1;
-                    &:hover {
-                        color:$prm_color1;
-                    }
+#db_std{
+    border: 0px solid $bdr-color1;
+    border-radius: $bdr-rds2;
+    box-shadow: 1px 1px 5px $bdr-color1;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: $prm_color2;
+    padding: 20px;
+    width: 300px;
+    ul{
+        li{
+            background-color: $prm_color1;
+            border-radius: $bdr-rds1;
+            margin-top: 5%;
+            padding: 3%;
+            list-style: none;
+            text-decoration: none;
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                color: $prm_color2;
+                font-size: 1.2rem;
+                &:hover{
+                    color: $prm_color3;
                 }
-            }	
+            }
         }
-        /* Change the link color to #111 (black) on hover */	  
     }
 }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px;
-            text-align: left;
-        }
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        .add-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-.studymaterial{
-	border: px solid $bdr-color1;
-	border-radius:$bdr-rds1;
-	margin:auto;
-	margin-top: 1%;
-	&:hover{
-		box-shadow:$bdr-shdw2;
-	}
+
+#tchr_signup_form_left{
+    border: 0px solid $bdr-color3;
+    border-radius: $bdr-rds2;
+    box-shadow: 0px 0px 0px $bdr-color3;
+    margin-top: 0%;
+    margin-bottom:0%; 
+    margin-left:7%;
+    float: left;
+    position: relative;
+    padding: 20px;
+}
+#tchr_signup_form_right{
+    border: 0px solid $bdr-color3;
+    border-radius: $bdr-rds2;
+    box-shadow: 0px 0px 0px $bdr-color1;
+    margin-top: 0%;
+    margin-right:7%;
+    margin-bottom:0%;
+    float: right;
+    position: relative;
+    padding: 20px;
 }

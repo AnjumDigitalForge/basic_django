@@ -20,12 +20,15 @@ def student_signup_view(request):
         std_contact = request.POST['std_contact'],
         std_email = request.POST['std_email'],
         )
-        return redirect('student_list')  # Redirect to a page that shows the list of students after successful registration
+        return redirect('students_dashboard')  # Redirect to a page that shows the list of students after successful registration
     return render(request, 'std_sign_up.html')  # Render the registration form template for GET requests
 
 def student_list(request):
     students = StdSignUp.objects.all()  # Retrieve all student records from the database
     return render(request, 'enrolled_students.html', {'students': students})  # Render the student list template with the retrieved student data
+
+def dashboard_std(request):
+    return render(request, 'dashboard_std.html')  # Render the student dashboard template for GET requests
 
 def teacher_signup_view(request):
     if request.method == 'POST':
@@ -40,8 +43,11 @@ def teacher_signup_view(request):
         teacher_email = request.POST['teacher_email'],
         teacher_password = request.POST['teacher_password']
         )
-        return redirect('teacher_list')  # Redirect to a page that shows the list of teachers after successful registration
+        return redirect('teachers_dashboard')  # Redirect to a page that shows the list of teachers after successful registration
     return render(request, 'teacher_signup.html')  # Render the registration form template for GET requests
+
+def dashboard_tch(request):
+    return render(request, 'dashboard_tch.html')  # Render the teacher dashboard template for GET requests
 
 def teacher_list(request):
     teachers = TeacherSignUp.objects.all()  # Retrieve all teacher records from the database
@@ -49,3 +55,9 @@ def teacher_list(request):
 
 def study_material(request):
     return render(request, 'stdy_material.html')  # Render the study material template for GET requests
+
+def profile_std(request):
+    return render(request, 'profile_std.html')  # Render the student profile template for GET requests
+
+def profile_tchr(request):
+    return render(request, 'profile_tchr.html')  # Render the teacher profile template for GET requests

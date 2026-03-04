@@ -1,0 +1,32 @@
+{% include "header.html" %}
+<title>Student's Dashboard</title>
+    <h1 id="h1" style="margin-top: 0%;">Dashboard</h1>
+<div class="container-fluid" id="dashboard">
+    <div class="row">
+        <div class="col-md-4" id="db_std">
+            <div class="row">
+                <ul>
+                    <img src="/media/images/My_Picture.jpg" alt="Profile Picture" class="img-circle" width="200" height="250">
+                    <li><a href="{% url 'profile_std' %}">My Profile</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizes</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="{% url 'study_material' %}">Study Material</a></li>
+                    <button class="btn btn-primary" style="margin-top: 5%; font-weight:bold;" >Logout</button>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-4" style="float: right; margin-top: 5%;">
+            <div class="row">
+                <h2>Hi, {{ user.first_name }}!</h2>
+                <h3>Your Attendance Progression</h3>
+                <progress id="progressbar" value="70" max="100" style="width: 100%; height: 30px;"></progress>
+            </div>
+        </div>
+    </div>
+</div>
+
+
