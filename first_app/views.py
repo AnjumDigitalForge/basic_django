@@ -2,7 +2,8 @@ from django.http import HttpResponse
 
 from django.shortcuts import render, redirect # BUILT-IN: Django's tools for rendering templates and redirecting users to different pages
 
-from .models import StdSignUp, TeacherSignUp # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
+from .models import StdSignUp, TeacherSignUp
+from first_app import models # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
 
 # Create your views here.
 def home(request):
@@ -38,6 +39,7 @@ def teacher_signup_view(request):
         teacher_father_name = request.POST['teacher_father_name'],
         teacher_cnic = request.POST['teacher_cnic'],
         teacher_qualification = request.POST['teacher_qualification'],
+        teacher_major_subject = request.POST['teacher_major_subject'],
         teacher_contact = request.POST['teacher_contact'],
         teacher_address = request.POST['teacher_address'],
         teacher_email = request.POST['teacher_email'],
@@ -61,3 +63,4 @@ def profile_std(request):
 
 def profile_tchr(request):
     return render(request, 'profile_tchr.html')  # Render the teacher profile template for GET requests
+

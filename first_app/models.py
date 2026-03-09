@@ -22,6 +22,7 @@ class TeacherSignUp(models.Model):
     teacher_father_name = models.CharField(max_length=100)
     teacher_cnic = models.IntegerField()
     teacher_qualification = models.CharField(max_length=50)
+    teacher_major_subject = models.CharField(max_length=50, blank=True)
     teacher_contact = models.CharField(max_length=15)
     teacher_address = models.CharField(max_length=200, blank=True)
     teacher_email = models.EmailField()
@@ -29,3 +30,4 @@ class TeacherSignUp(models.Model):
 
     def __str__(self):
         return f"{self.id} - {self.teacher_name}"
+

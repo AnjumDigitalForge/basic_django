@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # Third-party apps
     # Your custom apps
     'first_app', # Example app, replace with your actual app names
+    'second_app', # Example app, replace with your actual app names
 ]
 
 # Middleware Configuration
