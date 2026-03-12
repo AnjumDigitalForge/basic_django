@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+<title>Product Inventory</title>
+
+<h1>Product Inventory</h1>
+<form method="POST" action="{% url 'product_inventory' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="col-md-6">
+            <select name="category_id" required>
+                <option value="">Select Category</option>
+                {% for category in categories %}
+                    <option value="{{category.id}}">{{category.name}}</option>
+                {% endfor %}
+            </select><br>
+            <label for="product_name">product Name:</label>
+            <input style="margin-bottom:0%" type="text" class="form-control" id="name" name="product_name">
+            <label for="product_description">product Description:</label>
+            <textarea style="margin-bottom:0%" class="form-control" id="description" name="product_description"></textarea><br>
+
+            <label for="product_price">Price:</label>
+            <input style="margin-bottom:0%" type="number" class="form-control" id="price" name="product_price">
+            <label for="product_stock">Stock:</label>
+            <input style="margin-bottom:0%" type="number" class="form-control" id="stock" name="product_stock">
+            <button type="submit" class="btn btn-primary mt-3">Add Product</button>
+        </div>
+    </div>
+
+</form>

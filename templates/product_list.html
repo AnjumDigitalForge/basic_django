@@ -1,1 +1,23 @@
 {% include "header.html" %}
+<title>Product List</title>
+
+<table class="table table-striped">
+    <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Product ID</th>
+        <th>Updated At</th>
+    </tr>
+    {% for item in products %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{ item.product_name }}</td>
+        <td>{{ item.product_price }}</td>
+        <td>{{ item.product_description }}</td>
+        <td>{{ item.sku }}</td>
+        <td>{{ item.updated_at }}</td>
+    </tr>
+    {% endfor %}
+</table>

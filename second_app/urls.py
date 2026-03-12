@@ -1,7 +1,7 @@
 from django.urls import path
 from second_app import views
 
-
 urlpatterns = [
-    path('products/', views.product, name='product_list'),
+    path('product_inventory/', views.product_inventory_view, name='product_inventory'),
+    path('product_list/', views.product_list_view, name='product_list')
 ]
