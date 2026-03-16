@@ -1,5 +1,5 @@
 from django.urls import path
-from second_app import views
+from e_commerce import views
 
 urlpatterns = [
     path('product_inventory/', views.product_inventory_view, name='product_inventory'),

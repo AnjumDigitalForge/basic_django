@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     # Third-party apps
     # Your custom apps
     'schooling_system', # Example app, replace with your actual app names
-    'e-commerce', # Example app, replace with your actual app names
+    'e_commerce', # Example app, replace with your actual app names
 ]
 
 # Middleware Configuration
