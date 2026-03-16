@@ -34,8 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third-party apps
     # Your custom apps
-    'first_app', # Example app, replace with your actual app names
-    'second_app', # Example app, replace with your actual app names
+    'schooling_system', # Example app, replace with your actual app names
+    'e-commerce', # Example app, replace with your actual app names
 ]
 
 # Middleware Configuration

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect # BUILT-IN: Django's tools for rendering templates and redirecting users to different pages
 
 from .models import StdSignUp, TeacherSignUp
-from first_app import models # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
+from schooling_system import models # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
 
 # Create your views here.
 def home(request):

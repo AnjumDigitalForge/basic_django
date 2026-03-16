@@ -24,8 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', lambda request: redirect('home/')),  # Redirect root to myname/
     path('admin/', admin.site.urls),
-	path('', include('first_app.urls')), #this will include the urls.py file of first_app and it will check the urls.py file of first_app for the path and views.
-    path('', include('second_app.urls')), #this will include the urls.py file of second_app and it will check the urls.py file of second_app for the path and views.
+	path('', include('schooling_system.urls')), #this will include the urls.py file of first_app and it will check the urls.py file of first_app for the path and views.
+    path('', include('e-commerce.urls')), #this will include the urls.py file of second_app and it will check the urls.py file of second_app for the path and views.
 ]
 
 if settings.DEBUG:

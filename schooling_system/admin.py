@@ -1,7 +1,7 @@
 from django.contrib import admin # This line imports the admin module from django.contrib, which is used to register models with the Django admin site. By registering a model with the admin site, you can manage the data for that model through a user-friendly interface provided by Django.
 
 from .models import StdSignUp, TeacherSignUp
-from first_app import models # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
+from schooling_system import models # This line imports the std_sign_up model from the current app's models.py file. This allows you to use the std_sign_up model in this file, such as registering it with the admin site or performing database operations on it.
 
 @admin.register(StdSignUp) # This line registers the std_sign_up model with the Django admin site. By doing this, you can manage the data for the std_sign_up model through the admin interface, allowing you to add, edit, and delete instances of std_sign_up easily.
 class StdSignUpAdmin(admin.ModelAdmin):
